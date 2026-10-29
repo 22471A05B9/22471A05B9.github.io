@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lakshmiprasanna Pentyala – Software Developer (Fresher)</title>
+<meta name="description" content="Portfolio of Lakshmiprasanna Pentyala: full-stack web apps with React, Node.js and Python, plus an AI image-classification project.">
+<style>
+:root{--bg:#f4f7fb;--surface:#fff;--ink:#12203a;--muted:#4a5a74;--rule:#d8e0ec;--accent:#0b6e66;--accent2:#c2410c;--accent-ink:#fff;--chip:#e3f1ef;--mark:#ffe9a8;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1522;--surface:#142034;--ink:#e8eef7;--muted:#a3b2c8;--rule:#263650;--accent:#5fd9c9;--accent2:#ffb37a;--accent-ink:#06211e;--chip:#16322f;--mark:#4a3f12;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0c1522;--surface:#142034;--ink:#e8eef7;--muted:#a3b2c8;--rule:#263650;--accent:#5fd9c9;--accent2:#ffb37a;--accent-ink:#06211e;--chip:#16322f;--mark:#4a3f12;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 12px);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+nav{display:flex;flex-wrap:wrap;gap:6px 22px;padding:20px 0;font-size:15px}
+nav a{color:var(--muted);text-decoration:none}nav a:hover{color:var(--accent);text-decoration:underline}
+h1,h2,h3{font-family:Georgia,"Times New Roman","Noto Serif",serif;line-height:1.2;margin:0}
+h1{font-size:clamp(2.4rem,7vw,3.9rem);letter-spacing:-.015em}
+h2{font-size:1.75rem;margin-bottom:6px}h3{font-size:1.25rem}
+.sub{color:var(--muted);margin:0 0 24px;max-width:62ch}
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:34px;align-items:center;padding:14px 0 8px}
+.lede{font-size:1.2rem;color:var(--muted);max-width:56ch;margin:14px 0 22px}
+.links{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:11px 20px;border-radius:8px;background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.alt{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+.panel{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:22px;box-shadow:0 10px 30px rgba(18,32,58,.08)}
+.who{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.av{width:64px;height:64px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:700 1.5rem Georgia,serif;flex:none}
+.who b{display:block;font-size:1.05rem}.who span{color:var(--muted);font-size:.95rem}
+.facts{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:.97rem}
+.facts dt{font-weight:700}.facts dd{margin:0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:34px 0 0}
+.stat{background:var(--surface);border:1px solid var(--rule);border-radius:12px;padding:16px;text-align:center}
+.stat b{display:block;font:700 2rem Georgia,serif;color:var(--accent)}.stat span{color:var(--muted);font-size:.92rem}
+section{padding:58px 0 4px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:0 14px 34px rgba(18,32,58,.14);transform:translateY(-3px)}
+.card.wide{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.1fr}
+.shot{display:block;width:100%;height:auto;background:var(--chip);border-bottom:1px solid var(--rule)}
+.card.wide .shot{height:100%;border-bottom:0;border-right:1px solid var(--rule)}
+.body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px}
+.body p{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0}
+.chips li{background:var(--chip);color:var(--accent);font-size:.82rem;font-weight:600;padding:3px 10px;border-radius:99px}
+.lab{font-weight:700;font-size:.95rem;margin:4px 0 -4px}
+.flow{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 4px;font-size:.88rem}
+.flow li{background:var(--bg);border:1px solid var(--rule);border-radius:8px;padding:4px 10px}
+.flow li+li::before{content:"\2192";color:var(--accent2);margin-right:6px;font-weight:700}
+.flow li{display:inline-flex;align-items:center}
+.body ul.pts{margin:0;padding-left:20px}
+.cta{margin-top:auto;font-weight:700}
+.tl{list-style:none;margin:10px 0 0;padding:0 0 0 22px;border-left:3px solid var(--accent)}
+.tl li{position:relative;padding:0 0 22px 8px}
+.tl li::before{content:"";position:absolute;left:-31px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.tl b{display:block}.tl span{color:var(--muted);font-size:.93rem}
+.sk{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.sk .panel{padding:18px 20px}.sk h3{font-size:1.05rem;margin-bottom:10px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.two ul{margin:8px 0 0;padding-left:20px}
+mark{background:var(--mark);color:inherit;padding:0 3px}
+footer{margin-top:64px;padding:26px 0 40px;border-top:1px solid var(--rule);color:var(--muted);font-size:15px;text-align:center}
+.roles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.role{background:var(--surface);border:1px solid var(--rule);border-top:5px solid var(--accent);border-radius:12px;padding:18px 20px}.role.stretch{border-top-color:var(--accent2)}.role h3{font-size:1.08rem;margin-bottom:4px}.role .tag{display:inline-block;font-size:.8rem;font-weight:700;color:var(--accent);margin-bottom:8px}.role.stretch .tag{color:var(--accent2)}.role p{margin:0 0 8px;font-size:.95rem}.role small{color:var(--muted);display:block;font-size:.88rem}.s-bg{fill:var(--surface)}.s-line{fill:var(--rule)}.s-acc{fill:var(--accent)}.s-acc2{fill:var(--accent2)}.s-chip{fill:var(--chip)}.s-mut{fill:var(--muted);opacity:.55}.s-ink{fill:var(--ink)}.s-txt{fill:var(--accent-ink)}
+@media (max-width:760px){.hero,.card.wide,.grid,.two,.sk,.roles{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.card.wide .shot{border-right:0;border-bottom:1px solid var(--rule)}body{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Sections"><a href="#projects">Projects</a><a href="#more">More projects</a><a href="#journey">Journey</a><a href="#skills">Skills</a><a href="#roles">Roles</a><a href="#recognition">Education</a><a href="#contact">Contact</a></nav>
+
+<header class="hero">
+  <div>
+    <h1>Lakshmiprasanna Pentyala</h1>
+    <p class="lede">I build full-stack web apps with React, Node.js and Python, and I’ve shipped one AI-powered image classifier. I’m looking for my first software developer role.</p>
+    <div class="links">
+      <a class="btn" href="#projects">See my projects</a>
+      <a class="btn alt" href="https://www.linkedin.com/in/lakshmiprasanna-pentyala-3a554236b/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn alt" href="https://github.com/22471A05B9" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <div class="panel">
+    <div class="who"><div class="av" aria-hidden="true">LP</div><div><b>Software Developer (Fresher)</b><span>Narasaraopeta, Andhra Pradesh</span></div></div>
+    <dl class="facts">
+      <dt>Looking for</dt><dd>Associate Software Engineer, Junior Developer, full-stack or Python roles</dd>
+      <dt>Main stack</dt><dd>React.js, Node.js, Express.js, MongoDB, Python, FastAPI</dd>
+      <dt>Open to</dt><dd>Hyderabad, Bengaluru, Chennai, other Indian cities, remote</dd>
+    </dl>
+  </div>
+</header>
+
+<div class="stats" aria-label="Quick facts">
+  <div class="stat"><b>7</b><span>projects built</span></div>
+  <div class="stat"><b>8.5</b><span>CGPA out of 10</span></div>
+  <div class="stat"><b>7</b><span>certifications</span></div>
+  <div class="stat"><b>1st</b><span>prize, 24-hour hackathon</span></div>
+</div>
+
+<main>
+<section id="projects">
+  <h2>Projects</h2>
+  <p class="sub">Each card shows what the project does, how it works and the tools I used. The pictures are illustrations of each app’s layout, not screenshots.</p>
+  <div class="grid">
+
+  <article class="card wide">
+    <svg class="shot" viewBox="0 0 400 260" role="img" aria-label="Illustration of the retinopathy app: an uploaded eye image on the left and a prediction panel on the right">
+      <rect class="s-bg" x="12" y="12" width="376" height="236" rx="10"/><rect class="s-line" x="12" y="12" width="376" height="26" rx="10"/>
+      <circle class="s-acc2" cx="30" cy="25" r="4"/><circle class="s-acc" cx="44" cy="25" r="4"/><circle class="s-mut" cx="58" cy="25" r="4"/>
+      <rect class="s-chip" x="28" y="54" width="170" height="176" rx="10"/>
+      <circle class="s-acc2" cx="113" cy="124" r="52" opacity=".85"/><circle class="s-bg" cx="113" cy="124" r="36" opacity=".35"/><circle class="s-acc2" cx="133" cy="112" r="12"/>
+      <path d="M113 124 L80 98 M113 124 L84 150 M113 124 L146 150 M113 124 L112 82" stroke="var(--surface)" stroke-width="3" fill="none" opacity=".7"/>
+      <rect class="s-acc" x="58" y="196" width="110" height="24" rx="12"/><rect class="s-txt" x="78" y="204" width="70" height="8" rx="4"/>
+      <rect class="s-chip" x="214" y="54" width="160" height="176" rx="10"/>
+      <rect class="s-ink" x="228" y="70" width="90" height="10" rx="5"/><rect class="s-mut" x="228" y="92" width="130" height="7" rx="3"/><rect class="s-mut" x="228" y="108" width="110" height="7" rx="3"/>
+      <rect class="s-bg" x="228" y="132" width="132" height="76" rx="8"/><rect class="s-acc" x="240" y="146" width="58" height="12" rx="6"/><rect class="s-mut" x="240" y="168" width="104" height="7" rx="3"/><rect class="s-mut" x="240" y="184" width="84" height="7" rx="3"/>
+    </svg>
+    <div class="body">
+      <h3>Diabetic Retinopathy Detection</h3>
+      <ul class="chips"><li>Python</li><li>React.js</li><li>FastAPI</li><li>PyTorch</li><li>OpenCV</li><li>NumPy</li><li>Pillow</li></ul>
+      <p><b>What it does:</b> a web app that checks a retinal image for signs of diabetic retinopathy. You upload an image and the page shows the model’s prediction.</p>
+      <p class="lab">How it works</p>
+      <ol class="flow"><li>Upload in React</li><li>Preprocess with OpenCV, NumPy, Pillow</li><li>FastAPI runs the PyTorch model</li><li>Prediction shown</li></ol>
+      <p><b>What I built:</b> the React interface for upload and results, the image preprocessing step, and the connection between a trained PyTorch model and the FastAPI backend.</p>
+      <a class="cta" href="https://github.com/22471A05B9/diabetic-retinopathy-detection" target="_blank" rel="noopener">View code on GitHub</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <svg class="shot" viewBox="0 0 400 230" role="img" aria-label="Illustration of a chat app with message bubbles and an input bar">
+      <rect class="s-bg" x="12" y="12" width="376" height="206" rx="10"/><rect class="s-acc" x="12" y="12" width="376" height="28" rx="10"/><rect class="s-txt" x="28" y="22" width="80" height="8" rx="4"/>
+      <rect class="s-chip" x="28" y="54" width="170" height="30" rx="14"/><rect class="s-mut" x="42" y="65" width="110" height="8" rx="4"/>
+      <rect class="s-acc" x="190" y="94" width="182" height="30" rx="14"/><rect class="s-txt" x="204" y="105" width="120" height="8" rx="4"/>
+      <rect class="s-chip" x="28" y="134" width="130" height="30" rx="14"/><rect class="s-mut" x="42" y="145" width="80" height="8" rx="4"/>
+      <rect class="s-line" x="28" y="182" width="270" height="26" rx="13"/><rect class="s-acc2" x="308" y="182" width="64" height="26" rx="13"/>
+    </svg>
+    <div class="body">
+      <h3>Real-Time Chat Application</h3>
+      <ul class="chips"><li>React.js</li><li>Node.js</li><li>Express.js</li><li>MongoDB</li><li>Socket.io</li></ul>
+      <p><b>What it does:</b> a responsive chat app where messages show up instantly for everyone in the conversation.</p>
+      <p class="lab">How it works</p>
+      <ol class="flow"><li>React UI</li><li>Socket.io</li><li>Node and Express</li><li>MongoDB</li></ol>
+      <p><b>What I built:</b> real-time messaging with Socket.io and the link between the frontend and backend so messages flow end to end.</p>
+      <a class="cta" href="https://github.com/22471A05B9/real-time-chat-app" target="_blank" rel="noopener">View code on GitHub</a>
+    </div>
+  </article>
+
+  <article class="card">
+    <svg class="shot" viewBox="0 0 400 230" role="img" aria-label="Illustration of a recipe app with a grid of meal tiles">
+      <rect class="s-bg" x="12" y="12" width="376" height="206" rx="10"/><rect class="s-line" x="12" y="12" width="376" height="26" rx="10"/>
+      <rect class="s-acc2" x="28" y="21" width="70" height="8" rx="4"/>
+      <g><rect class="s-chip" x="28" y="52" width="110" height="78" rx="8"/><circle class="s-acc2" cx="83" cy="86" r="22"/><rect class="s-mut" x="44" y="116" width="78" height="6" rx="3"/></g>
+      <g><rect class="s-chip" x="145" y="52" width="110" height="78" rx="8"/><circle class="s-acc" cx="200" cy="86" r="22"/><rect class="s-mut" x="161" y="116" width="78" height="6" rx="3"/></g>
+      <g><rect class="s-chip" x="262" y="52" width="110" height="78" rx="8"/><circle class="s-acc2" cx="317" cy="86" r="22" opacity=".7"/><rect class="s-mut" x="278" y="116" width="78" height="6" rx="3"/></g>
+      <g><rect class="s-chip" x="28" y="138" width="110" height="68" rx="8"/><circle class="s-acc" cx="83" cy="166" r="18"/></g>
+      <g><rect class="s-chip" x="145" y="138" width="110" height="68" rx="8"/><circle class="s-acc2" cx="200" cy="166" r="18"/></g>
+      <g><rect class="s-chip" x="262" y="138" width="110" height="68" rx="8"/><circle class="s-acc" cx="317" cy="166" r="18" opacity=".7"/></g>
+    </svg>
+    <div class="body">
+      <h3>Food Recipe Web App</h3>
+      <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>MealDB API</li></ul>
+      <p><b>What it does:</b> shows meals and recipes pulled live from the MealDB API.</p>
+      <p class="lab">How it works</p>
+      <ol class="flow"><li>Page loads</li><li>JavaScript calls MealDB</li><li>Recipes rendered</li></ol>
+      <p><b>What I built:</b> the page layout, the API requests and the code that turns the response into recipe cards.</p>
+      <div style="margin-top:auto;display:flex;gap:18px;flex-wrap:wrap"><a class="cta" style="margin:0" href="https://lnkd.in/g9kJgk6w" target="_blank" rel="noopener">Open the live demo</a><a class="cta" style="margin:0" href="https://github.com/22471A05B9/food-recipe-app" target="_blank" rel="noopener">View code on GitHub</a></div>
+    </div>
+  </article>
+
+  <article class="card wide">
+    <svg class="shot" viewBox="0 0 400 230" role="img" aria-label="Illustration of a textile store with a product grid and navigation bar">
+      <rect class="s-bg" x="12" y="12" width="376" height="206" rx="10"/><rect class="s-ink" x="12" y="12" width="376" height="28" rx="10"/>
+      <rect class="s-txt" x="28" y="22" width="60" height="8" rx="4"/><rect class="s-mut" x="250" y="23" width="30" height="6" rx="3"/><rect class="s-mut" x="292" y="23" width="30" height="6" rx="3"/><rect class="s-mut" x="334" y="23" width="30" height="6" rx="3"/>
+      <rect class="s-chip" x="28" y="54" width="82" height="100" rx="8"/><path d="M28 74h82M28 94h82M28 114h82M28 134h82" stroke="var(--accent)" stroke-width="5" opacity=".6"/>
+      <rect class="s-chip" x="120" y="54" width="82" height="100" rx="8"/><path d="M140 54v100M160 54v100M180 54v100" stroke="var(--accent2)" stroke-width="6" opacity=".7"/>
+      <rect class="s-chip" x="212" y="54" width="82" height="100" rx="8"/><circle class="s-acc" cx="253" cy="104" r="26" opacity=".7"/><circle class="s-bg" cx="253" cy="104" r="12"/>
+      <rect class="s-chip" x="304" y="54" width="68" height="100" rx="8"/><path d="M304 80l68 22M304 110l68 22" stroke="var(--accent)" stroke-width="5" opacity=".6"/>
+      <rect class="s-mut" x="28" y="166" width="60" height="7" rx="3"/><rect class="s-mut" x="120" y="166" width="60" height="7" rx="3"/><rect class="s-mut" x="212" y="166" width="60" height="7" rx="3"/><rect class="s-mut" x="304" y="166" width="50" height="7" rx="3"/>
+      <rect class="s-acc" x="28" y="188" width="90" height="20" rx="10"/>
+    </svg>
+    <div class="body">
+      <h3>Home Textiles Web Application</h3>
+      <ul class="chips"><li>React.js</li><li>HTML5</li><li>CSS3</li></ul>
+      <p><b>What it does:</b> a responsive site for browsing home textile products, with layouts that adapt to phone, tablet and desktop screens.</p>
+      <p class="lab">How it works</p>
+      <ol class="flow"><li>Reusable React components</li><li>Product display and navigation</li><li>Responsive CSS layouts</li></ol>
+      <p><b>What I built:</b> reusable components for product display, navigation and interaction, with a clean and easy-to-browse design.</p>
+      <a class="cta" href="https://github.com/22471A05B9/home-textiles-web-app" target="_blank" rel="noopener">View code on GitHub</a>
+    </div>
+  </article>
+  </div>
+</section>
+
+<section id="more" style="padding-top:34px">
+  <h2>More projects</h2>
+  <p class="sub">Three more apps, including one that uses Angular and MySQL.</p>
+  <div class="grid">
+    <article class="card"><div class="body">
+      <h3>Movies App</h3>
+      <ul class="chips"><li>React.js</li><li>Node.js</li><li>MongoDB</li><li>Third-party API</li></ul>
+      <p>A movie web application built with the MERN stack. React provides the interface, Node.js the backend and MongoDB the data storage, with movie data coming from a third-party API.</p>
+      <a class="cta" href="https://github.com/22471A05B9/movies-app" target="_blank" rel="noopener">View code on GitHub</a>
+    </div></article>
+    <article class="card"><div class="body">
+      <h3>Rice Marketing System</h3>
+      <ul class="chips"><li>Angular</li><li>HTML</li><li>CSS</li><li>MySQL</li></ul>
+      <p>A web application that helps farmers reach consumers more efficiently, built with Angular and MySQL, with a focus on clear UI/UX and data management.</p>
+      <a class="cta" href="https://github.com/22471A05B9/rice-marketing-system" target="_blank" rel="noopener">View code on GitHub</a>
+    </div></article>
+    <article class="card"><div class="body">
+      <h3>Weather App</h3>
+      <ul class="chips"><li>Third-party API</li><li>JavaScript</li></ul>
+      <p>A weather application that fetches real-time weather data from a third-party API and shows it in a simple, easy-to-read interface.</p>
+      <a class="cta" href="https://github.com/22471A05B9/weather-app" target="_blank" rel="noopener">View code on GitHub</a>
+    </div></article>
+  </div>
+</section>
+
+<section id="journey">
+  <h2>Journey</h2>
+  <p class="sub">My path so far, in order.</p>
+  <ul class="tl">
+    <li><b>2022: Started B.Tech in Computer Science and Engineering</b><span>Narasaraopeta Engineering College (Autonomous)</span></li>
+    <li><b>2023–2024: Certifications in Python, SQL, JavaScript, Git and Angular</b><span>NPTEL, Infosys Springboard and HackerRank</span></li>
+    <li><b>May–June 2025: MERN Full Stack with AI Intern</b><span>DataValley.AI, Vijayawada. Built Food Recipe and Movie web apps in React.js using third-party APIs, and practised testing and debugging.</span></li>
+    <li><b>2026: Completing B.Tech with a CGPA of 8.5/10</b><span>Now looking for my first software developer role.</span></li>
+  </ul>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <p class="sub">Grouped by what I use them for.</p>
+  <div class="sk">
+    <div class="panel"><h3>Frontend</h3><ul class="chips"><li>React.js</li><li>HTML5</li><li>CSS3</li><li>JavaScript</li></ul></div>
+    <div class="panel"><h3>Backend and APIs</h3><ul class="chips"><li>Node.js</li><li>Express.js</li><li>FastAPI</li><li>REST APIs</li><li>Socket.io</li></ul></div>
+    <div class="panel"><h3>Languages and databases</h3><ul class="chips"><li>Python</li><li>SQL</li><li>MongoDB</li></ul></div>
+    <div class="panel"><h3>AI and image processing</h3><ul class="chips"><li>PyTorch</li><li>OpenCV</li><li>NumPy</li><li>Pillow</li></ul></div>
+    <div class="panel"><h3>Fundamentals and tools</h3><ul class="chips"><li>Data Structures and Algorithms</li><li>OOP</li><li>DBMS</li><li>Git</li><li>GitHub</li><li>VS Code</li></ul></div>
+    <div class="panel"><h3>Practising now</h3><ul class="chips"><li>Java</li></ul></div>
+  </div>
+</section>
+
+<section id="roles">
+  <h2>Roles I’m a good fit for</h2>
+  <p class="sub">Each role is matched to skills and projects shown on this page. The orange card is a stretch role I’m working towards.</p>
+  <div class="roles">
+    <div class="role"><h3>Full Stack Developer (MERN)</h3><span class="tag">Strongest match</span><p>I’ve built a real-time chat app end to end and interned on MERN projects.</p><small>React.js, Node.js, Express.js, MongoDB, Socket.io</small></div>
+    <div class="role"><h3>Frontend / React Developer</h3><span class="tag">Strong match</span><p>Responsive React interfaces for the retinopathy app, the chat app and the textile site.</p><small>React.js, JavaScript, HTML5, CSS3</small></div>
+    <div class="role"><h3>Associate Software Engineer</h3><span class="tag">Strong match</span><p>Solid computer science base plus hands-on projects and certifications.</p><small>Python, SQL, Data Structures, OOP, DBMS, Git</small></div>
+    <div class="role"><h3>Python / FastAPI Developer</h3><span class="tag">Good match</span><p>I serve a trained model through a FastAPI backend and work with REST APIs.</p><small>Python, FastAPI, REST APIs, SQL, MongoDB</small></div>
+    <div class="role"><h3>Graduate Engineer Trainee</h3><span class="tag">Good match</span><p>Fits trainee programmes at larger companies, with a CGPA of 8.5 and seven certifications.</p><small>Fundamentals, Python, JavaScript, SQL</small></div>
+    <div class="role stretch"><h3>Junior AI / ML Application Developer</h3><span class="tag">Stretch</span><p>My retinopathy project combines image processing, a PyTorch model and a web app.</p><small>PyTorch, OpenCV, NumPy, FastAPI, React.js</small></div>
+  </div>
+</section>
+
+<section id="recognition">
+  <h2>Education and recognition</h2>
+  <p class="sub"><b>B.Tech in Computer Science and Engineering</b>, Narasaraopeta Engineering College (Autonomous), 2022–2026. CGPA 8.5/10.</p>
+  <div class="two">
+    <div class="panel"><h3>Certifications</h3><ul>
+      <li>The Joy of Computing in Python, NPTEL (IIT Madras), 2023</li>
+      <li>Data Analytics with Python, NPTEL, 2024</li>
+      <li>Angular Development, Infosys Springboard, 2024</li>
+      <li>SQL and Python Foundations, Infosys Springboard, 2023</li>
+      <li>Python, JavaScript (Basic), Git and GitHub, HackerRank, 2023</li></ul></div>
+    <div class="panel"><h3>Achievements</h3><ul>
+      <li><mark>First prize</mark> in a 24-hour hackathon, as part of a team.</li>
+      <li>Helped organize technical events and workshops at college level.</li>
+      <li>Keep learning Generative AI and full-stack development through workshops and self-study.</li></ul></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="sub">I’m open to Associate Software Engineer and Junior Developer roles. Email is the easiest way to reach me.</p>
+  <div class="links">
+    <a class="btn" href="mailto:pentyalalakshmiprasanna123@gmail.com">pentyalalakshmiprasanna123@gmail.com</a>
+    <a class="btn alt" href="https://www.linkedin.com/in/lakshmiprasanna-pentyala-3a554236b/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn alt" href="https://github.com/22471A05B9" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</section>
+</main>
+<footer>© 2026 Lakshmiprasanna Pentyala</footer>
+</div>
+</body>
+</html>
